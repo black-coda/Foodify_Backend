@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+from environ import Env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -158,4 +159,9 @@ ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 
 # Eliminate need to provide username, as it's a very old practice
 ACCOUNT_USERNAME_REQUIRED = False
+
+env = Env()
+env.read_env()
+TEST_SECRET_KEY = 'SECRET_KEY'
+TEST_PUBLIC_KEY = 'PUBLIC_KEY'
 
