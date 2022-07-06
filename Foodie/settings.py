@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'main',
     'accounts',
+    'order',
 
     # Third party App
     'allauth',
@@ -143,8 +144,8 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SITE_ID = 1
-LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'trial'
+LOGOUT_REDIRECT_URL = 'trial'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # Custom allauth settings
